@@ -51,16 +51,12 @@ yum install insights-client
 insights-client --register
 ```
 
-
-
-
+## Chapter 2. Configuring Baseline Data
 
 ```bash
 # Cockpit:
-yum -y install cockpit
-systemctl start cockpit
-firewall-cmd -add-service=cockpit --permanent
-firewall-cmd --reload                           # http://localhost:9090
+firewall-cmd -add-service=cockpit --permanent  # defaults http://localhost:9090
+firewall-cmd --reload
 
 # Co-pilot:
 yum -y install pcp                              # performance co-pilot
