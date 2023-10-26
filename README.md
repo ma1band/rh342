@@ -55,8 +55,9 @@ insights-client --register
 
 ```bash
 # Cockpit:
-firewall-cmd -add-service=cockpit --permanent  # defaults http://localhost:9090
+firewall-cmd -add-service=cockpit --permanent   # defaults http://localhost:9090
 firewall-cmd --reload
+dnf install cockpit-session-recording tlog      # User session recording
 
 # Co-pilot:
 yum -y install pcp                              # performance co-pilot
